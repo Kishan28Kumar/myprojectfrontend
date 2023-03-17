@@ -10,7 +10,7 @@ function UserProfile(){
     var decryptuserToken = CryptoJS.AES.decrypt(userEmail,userID).toString(CryptoJS.enc.Utf8);
     const [user,setUser] = useState([]);
     function getUser(){
-        Axios.post('http://localhost:80/getUser',{
+        Axios.post('https://kishanprojectapi.onrender.com/getUser',{
             Email:decryptuserToken
         }).then(function(succ){
             setUser(succ.data);
