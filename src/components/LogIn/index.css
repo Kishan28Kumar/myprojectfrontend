@@ -1,0 +1,8 @@
+.nw-user-box {
+  display: flex;
+  margin-top: 50px;
+  text-transform: capitalize;
+  font-size: 15px;
+  font-weight: bold;
+  align-items: center;
+}
