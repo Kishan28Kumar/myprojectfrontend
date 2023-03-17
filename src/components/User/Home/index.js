@@ -5,7 +5,7 @@ import ProdcutCard from '../../ProductCard';
 function UserHome(){
     const [products, setProducts] = useState([]);
     function getproducts(){
-        Axios.get('http://localhost:80/getProducts').then(function(succ){
+        Axios.get('https://kishanprojectapi.onrender.com/getProducts').then(function(succ){
             setProducts(succ.data);
             console.log(products);
         })
