@@ -28,11 +28,7 @@ function LogIn(){
                     var encryptuserToken = CryptoJS.AES.encrypt(succ.data.Email,succ.data._id);
                     window.localStorage.setItem('userToken',encryptuserToken);
                     window.localStorage.setItem('userID',succ.data._id);
-                    return (
-                        <>
-                            <Route path="/user/account" element={<User />} />
-                        </>
-                    )
+                    window.location.href="https://kishanproject.onrender.com/user/account";
                 }
             })
         }   
