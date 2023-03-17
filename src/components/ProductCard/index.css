@@ -1,0 +1,12 @@
+.card {
+  /* border: 2px solid red; */
+  width: 220px;
+  margin-left: 20px;
+  box-shadow: 0px 0px 5px black;
+  padding: 10px;
+}
+
+.product-img {
+  width: 200px;
+  height: 200px;
+}
