@@ -22,7 +22,7 @@ function Home() {
             var decryptuserToken = CryptoJS.AES.decrypt(token,userID);
             console.log(decryptuserToken);
             console.log(token);
-            Axios.post('http://localhost:80/userAutoLogin',{
+            Axios.post('https://kishanprojectapi.onrender.com/userAutoLogin',{
                 Email:decryptuserToken.toString(CryptoJS.enc.Utf8)
             }).then(function(succ){
                 if(succ.data == false){
@@ -35,7 +35,7 @@ function Home() {
     }
 
     function getproducts(){
-        Axios.get('http://localhost:80/getProducts').then(function(succ){
+        Axios.get('https://kishanprojectapi.onrender.com/getProducts').then(function(succ){
             setProducts(succ.data);
             console.log(products);
         })
