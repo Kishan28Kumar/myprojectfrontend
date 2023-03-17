@@ -4,6 +4,7 @@ import Nav from '../Nav';
 import { useState } from "react";
 import Axios from 'axios';
 import { NavLink } from 'react-router-dom';
+import User from "../User";
 
 
 var CryptoJS = require('crypto-js');
@@ -26,7 +27,11 @@ function LogIn(){
                     var encryptuserToken = CryptoJS.AES.encrypt(succ.data.Email,succ.data._id);
                     window.localStorage.setItem('userToken',encryptuserToken);
                     window.localStorage.setItem('userID',succ.data._id);
-                    window.location.href="/user/account";
+                    return (
+                        <>
+                            <Route path="/user/account" element={<User />} />
+                        </>
+                    )
                 }
             })
         }   
