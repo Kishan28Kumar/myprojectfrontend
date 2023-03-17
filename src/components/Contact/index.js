@@ -17,7 +17,7 @@ function Contact(){
         }else if(message=="" || message==" "){
             alert("Message can't be empty");
         }else{
-            Axios.post('http://localhost:80/insertMessage',{
+            Axios.post('https://kishanprojectapi.onrender.com/insertMessage',{
                 Name:name,
                 Email:email,
                 Message:message
