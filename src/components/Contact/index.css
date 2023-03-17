@@ -1,0 +1,33 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+}
+
+.input-container > input,
+textarea {
+  border: 0;
+  width: 300px;
+  padding: 5px;
+  margin-top: 20px;
+  box-shadow: 0px 0px 5px black;
+  border-radius: 5px;
+}
+
+.input-container > input:focus,
+textarea:focus {
+  outline: none;
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out;
+  border: 1px solid black;
+}
+
+.message-box > textarea {
+  height: 200px;
+}
+
+.submit-btn {
+  margin-top: 20px;
+  background-color: rgb(0, 157, 255);
+}
