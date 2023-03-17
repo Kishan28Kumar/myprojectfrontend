@@ -30,7 +30,7 @@ function Register(){
                 passErr.style.display = "none";
             },2000)
         }else{
-            Axios.post('http://localhost:80/checkuser',{
+            Axios.post('https://kishanprojectapi.onrender.com/checkuser',{
                 Email:email
             }).then(function(succ){
                 if(succ.data == true ){
@@ -43,7 +43,7 @@ function Register(){
     }
 
     function insertUser(){
-        Axios.post('http://localhost:80/registerUser',{
+        Axios.post('https://kishanprojectapi.onrender.com/registerUser',{
             Name:name,
             Email:email,
             Password:password
